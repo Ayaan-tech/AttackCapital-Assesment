@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/trycatch.ts","./src/config/api.ts","./src/config/db.ts","./src/config/seed.ts","./src/config/types.ts","./src/config/zod.ts","./src/controllers/bot.ts","./src/routes/bot.ts"],"version":"5.9.2"}

@@ -1,0 +1,151 @@
+# =========================
+# Root .gitignore for monorepo
+# Structure: frontend/ (Vite) and backend/ (Express)
+# =========================
+
+# --- Environment / secrets ---
+# Ignore dotenv files (keep .env.example in repo if needed)
+.env
+*.env.local
+.env.*.local
+.env.*.secret
+
+# --- Node / package manager ---
+# Ignore node modules for any package in repo
+node_modules/
+**/node_modules/
+
+# npm / yarn / pnpm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# pnpm store (optional)
+.pnpm-store/
+.pnp.*
+.pnpm-debug.log*
+
+# --- Build outputs ---
+# Frontend (Vite) build dir
+/frontend/dist/
+/frontend/.vite/
+/frontend/.cache/
+/frontend/.parcel-cache/
+
+# Backend build / transpile outputs
+/backend/dist/
+/backend/build/
+/backend/lib/
+/backend/.cache/
+
+# Generic build / output directories across repo
+dist/
+build/
+out/
+
+# --- OS files / Thumbs / metadata ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# --- IDE / Editor ---
+.vscode/
+.vscode/*
+!.vscode/settings.json        # optionally keep shared settings (uncomment if you want)
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+/.history/
+
+# --- Logs / runtime files ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+/logs
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# --- Test coverage / reports ---
+coverage/
+coverage-*/ 
+.nyc_output/
+test-results/
+reports/
+
+# --- Temporary / caches / lock files used by tools ---
+tmp/
+temp/
+.cache/
+.cache-loader/
+*.tmp
+*.temp
+
+# --- Docker / container / orchestration ---
+# ignore local docker-compose overrides and local envs
+docker-compose.override.yml
+docker-compose.*.yml
+.env.docker
+docker-compose.local.yml
+
+# --- CI / build system artifacts ---
+/dist-*/ 
+/build-*/
+artifacts/
+*.tgz
+
+# --- Security / keys ---
+*.pem
+*.key
+*.crt
+*.p12
+credentials.json
+
+# --- Misc common dev files ---
+*.log.*
+*.orig
+*.backup
+*.swp
+*~.nib
+*.DS_Store
+
+# --- Coverage and profiling ---
+*.lcov
+profiler/
+*.prof
+
+# --- Optional: PM2 / process managers ---
+pm2.log
+pm2.pid
+pm2-*.log
+
+# --- Optional: Editor swap / lockfiles ---
+# Vim/Vi
+.*.swp
+.*.swo
+
+# Node REPL history
+.node_repl_history
+
+# --- Optional: If you use Docker secrets / compose, ignore these containers' local files ---
+# localstack, terraform, etc (uncomment if used)
+# .terraform/
+# .serverless/
+# localstack/
+
+# -------------------------
+# Notes:
+# - If you WANT to keep lockfiles (recommended for reproducible installs), do NOT add package-lock.json, yarn.lock, or pnpm-lock.yaml here.
+# - If you prefer more strict per-package control, replace generic patterns (e.g., `node_modules/`) with per-folder ones like `/frontend/node_modules/` and `/backend/node_modules/`.
+# - Keep a `.env.example` in repo to show required env vars; only actual secret `.env` files are ignored above.
+# -------------------------
