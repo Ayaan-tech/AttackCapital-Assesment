@@ -1,6 +1,6 @@
 import type { Bot, CallLog, BotFormData } from '../types';
 
-const BASE_URL = 'https://6f81ddabab81.ngrok-free.app'
+const BASE_URL = 'https://attack-capital-assesment.vercel.app/'
 
 const commonHeaders = {
     'Content-Type': 'application/json',
