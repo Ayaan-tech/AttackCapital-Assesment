@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
+import { Textarea } from '../ui/TextArea';
 import { Select } from '../ui/Select';
 import { Slider } from '../ui/Slider';
 import type { Bot, BotFormData } from '../../types';

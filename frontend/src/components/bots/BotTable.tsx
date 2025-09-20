@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Edit2, Trash2, Copy, Check } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Modal } from '../ui/Modal';
@@ -107,7 +107,7 @@ export function BotTables({ bots, onEdit, onDelete, loading }: BotTableProps) {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm text-gray-900 dark:text-gray-100">
-                        {bot.llmModelName || 'Not specified'}
+                        {bot.llm_model_name || 'Not specified'}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">

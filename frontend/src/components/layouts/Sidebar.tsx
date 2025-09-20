@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Bot, FileText } from 'lucide-react';
 import type { Page } from '../../types';
 

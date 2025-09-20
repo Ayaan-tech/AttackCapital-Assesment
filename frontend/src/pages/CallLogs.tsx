@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { CallLogsTable } from '../components/logs/CallLogsTable';
 import { getCallLogs } from '../utils/api';
 import type { CallLog } from '../types';
